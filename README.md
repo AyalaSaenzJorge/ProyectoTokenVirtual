@@ -104,6 +104,21 @@ La aplicación estará levantada en:
 
 > http://localhost:3000/
 
+## CAPTURAS DE PANTALLA
+
+* Se genera correctamente un nuevo token por 60 segundos.
+![escenario 1](https://github.com/AyalaSaenzJorge/ProyectoTokenVirtual/blob/main/imagen1.png)
+
+
+* Cuando se presiona el botón, se usa el token y se muestra el tiempo restante actualizado.
+![escenario 2](https://github.com/AyalaSaenzJorge/ProyectoTokenVirtual/blob/main/imagen2.png)
+
+
+* Escenario que ocurre cuando se presiona el botón, se expira el token y el servicio de generación de token deja de funcionar.
+![escenario 3](https://github.com/AyalaSaenzJorge/ProyectoTokenVirtual/blob/main/imagen3.png)
+
+* Escenario que ocurre cuando ningún servicio funciona correctamente.
+![escenario 4](https://github.com/AyalaSaenzJorge/ProyectoTokenVirtual/blob/main/imagen4.png)
 
 
 
