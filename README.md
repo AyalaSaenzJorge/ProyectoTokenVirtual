@@ -48,6 +48,49 @@ se ha usado:
 * NPM 6.14.15
 * MySQL Server 8.0.+
 
+## LEVANTAR BD
+
+Crear base de datos token_control_service_DB e importar el script:
+
+> `mysql -u root -p token_control_service_DB < token_control_service_DB.sql`
+
+## LEVANTAR SERVICIOS
+
+### Servicio de control
+* Dirigirse a /ProyectoTokenVirtual/backend/token_control_service:
+/ProyectoTokenVirtual/backend/token_control_service$  `source env/bin/activate`
+/ProyectoTokenVirtual/backend/token_control_service$  `pip install -r requirements.txt`
+
+* Dirigirse a /ProyectoTokenVirtual/backend/token_control_service:
+/ProyectoTokenVirtual/backend/token_control_service/Token_Control$ `python3 manage.py migrate`
+/ProyectoTokenVirtual/backend/token_control_service/Token_Control$ `python3 manage.py runserver`
+
+> El servicio estará levantado, con los siguientes endpoints disponibles (los parámetros son ejemplos):
+> http://127.0.0.1:8000/generar_token?cliente=jorge.ayala 
+> http://127.0.0.1:8000/validar_token?cliente=jorge.ayala&token=388639 
+
+
+### Servicio de generación de token
+* Dirigirse a /ProyectoTokenVirtual/backend/token_generation_service:
+/ProyectoTokenVirtual/backend/token_generation_service$  `source env/bin/activate`
+/ProyectoTokenVirtual/backend/token_generation_service$  `pip install -r requirements.txt`
+
+* Dirigirse a /ProyectoTokenVirtual/backend/token_generation_service:
+/ProyectoTokenVirtual/backend/token_generation_service/Token_Generation$ `python3 manage.py runserver`
+
+> El servicio estará levantado, con los siguientes endpoints disponibles (los parámetros son ejemplos):
+> http://127.0.0.1:8001/crear_token?cliente=jorge.ayala 
+
+## Frontend
+
+* Dirigirse a ProyectoTokenVirtual/frontend:
+
+/ProyectoTokenVirtual/frontend$ `npm install`
+/ProyectoTokenVirtual/frontend$ `npm start`
+
+La aplicación estará levantada en: http://localhost:3000/
+
+
 
 
 
