@@ -24,7 +24,8 @@ la implementación del Token Virtual.
 
 Se plantea desarrollar una app siguiendo el patrón de arquitectura de Microservicios, de esa
 forma se puede manejar cada funcionalidad requerida como componentes individuales, brindando
-escalabilidad y detectar bugs en caso de que algunos de los microservicios
+escalabilidad y facilidad de detectar bugs en caso de que algunos de los microservicios deje
+de funcionar.
 
 ![Solución propuesta](https://github.com/AyalaSaenzJorge/ProyectoTokenVirtual/blob/main/Soluci%C3%B3n%20de%20Token%20virtual.jpg)
 
