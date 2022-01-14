@@ -20,3 +20,22 @@ Video Ilustrativo [Segundo 42]: https://youtu.be/3JJRP8MQoYY?t=42
 Desarrollar un sistema web orientado a servicios donde se demuestre el funcionamiento de
 la implementación del Token Virtual.
 
+## Solución
+
+Se plantea desarrollar una app siguiendo el patrón de arquitectura de Microservicios, de esa
+forma se puede manejar cada funcionalidad requerida como componentes individuales, brindando
+escalabilidad y detectar bugs en caso de que algunos de los microservicios
+
+![Solución propuesta](https://github.com/AyalaSaenzJorge/ProyectoTokenVirtual/blob/main/Soluci%C3%B3n%20de%20Token%20virtual.jpg)
+
+**Token_Control_Service**: permite generar tokens a partir de un nombre de usuario, guardando
+en una BD los tokens creados con información de fecha de creación y las veces que el token
+se ha usado:
+* Para la generación del token, se llama al servicio *Token_Generation_Service*
+* Cada vez que se usa un token, éste es primero validado considerando que se solicita su uso
+* luego de haber pasado 60 segundos, automáticamente se genera un nuevo token.
+* Todas las veces que se usa un token se almacenan en una BD.
+**Token_Generation_Service**: genera un número de 6 dígitos que funciona como token virtual.
+
+
+
