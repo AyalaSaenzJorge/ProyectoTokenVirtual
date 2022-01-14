@@ -20,7 +20,7 @@ Video Ilustrativo [Segundo 42]: https://youtu.be/3JJRP8MQoYY?t=42
 Desarrollar un sistema web orientado a servicios donde se demuestre el funcionamiento de
 la implementación del Token Virtual.
 
-## Solución
+## SOLUCIÓN
 
 Se plantea desarrollar una app siguiendo el patrón de arquitectura de Microservicios, de esa
 forma se puede manejar cada funcionalidad requerida como componentes individuales, brindando
@@ -35,7 +35,18 @@ se ha usado:
 * Cada vez que se usa un token, éste es primero validado considerando que se solicita su uso
 * luego de haber pasado 60 segundos, automáticamente se genera un nuevo token.
 * Todas las veces que se usa un token se almacenan en una BD.
+
 **Token_Generation_Service**: genera un número de 6 dígitos que funciona como token virtual.
+
+## REQUERIMIENTOS
+
+* Python 3.8+
+* Pip 20.0.2
+* Virtualenv 20.0.17 
+* NodeJS v14.18.3
+* NPM 6.14.15
+* MySQL Server 8.0.+
+
 
 
 
